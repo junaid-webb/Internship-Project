@@ -1,52 +1,45 @@
-
-
-console.log("AI Interview Coach - Day 2 Loaded Successfully!");
-
-
-
+console.log("AI Interview Coach - Day 3 Loaded Successfully!");
 const startBtn = document.getElementById("startBtn");
 
-startBtn.addEventListener("click", function (event) {
+if (startBtn) {
 
-    event.preventDefault();
+    startBtn.addEventListener("click", function (event) {
 
- 
-    startBtn.innerHTML = `
-        <span class="spinner-border spinner-border-sm"></span>
-        Loading...
-    `;
+        event.preventDefault();
 
+        startBtn.innerHTML = `
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading...
+        `;
 
-    startBtn.classList.add("disabled");
+        startBtn.classList.add("disabled");
 
-  
-    setTimeout(function () {
+        setTimeout(function () {
 
-        window.open(
-            "https://ai-interview-buddy-yxpk.onrender.com",
-            "_blank"
-        );
+            window.open(
+                "https://ai-interview-buddy-yxpk.onrender.com",
+                "_blank"
+            );
 
-        startBtn.innerHTML = "Start Interview";
-        startBtn.classList.remove("disabled");
+            startBtn.innerHTML = "Start Interview";
 
-    }, 2000);
+            startBtn.classList.remove("disabled");
 
-});
+        }, 1800);
 
+    });
 
+}
 
 const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", function () {
 
-    if (window.scrollY > 30) {
+    if (window.scrollY > 50) {
 
         navbar.classList.add("shadow");
 
-    }
-
-    else {
+    } else {
 
         navbar.classList.remove("shadow");
 
@@ -54,41 +47,148 @@ window.addEventListener("scroll", function () {
 
 });
 
+document.querySelectorAll("a[href^='#']").forEach(function(link){
 
-const hero = document.querySelector(".hero");
+    link.addEventListener("click", function(e){
 
-window.addEventListener("load", function () {
+        const target = document.querySelector(this.getAttribute("href"));
 
-    hero.style.opacity = "0";
+        if(target){
 
-    hero.style.transition = "1s";
+            e.preventDefault();
 
-    setTimeout(function () {
+            target.scrollIntoView({
 
-        hero.style.opacity = "1";
+                behavior:"smooth"
 
-    }, 200);
+            });
 
-});
-
-
-
-const cards = document.querySelectorAll(".stat-card");
-
-cards.forEach(function(card){
-
-    card.addEventListener("mouseenter",function(){
-
-        console.log("Viewing Statistics");
+        }
 
     });
 
 });
 
 
+const counters = document.querySelectorAll(".stat-card h2");
+
+let counterStarted = false;
+
+function startCounter(){
+
+    if(counterStarted) return;
+
+    counterStarted = true;
+
+    counters.forEach(function(counter){
+
+        const targetText = counter.innerText;
+
+        const number = parseInt(targetText);
+
+        let count = 0;
+
+        const increment = Math.ceil(number / 50);
+
+        const interval = setInterval(function(){
+
+            count += increment;
+
+            if(count >= number){
+
+                counter.innerText = targetText;
+
+                clearInterval(interval);
+
+            }else{
+
+                if(targetText.includes("%")){
+
+                    counter.innerText = count + "%";
+
+                }
+
+                else if(targetText.includes("+")){
+
+                    counter.innerText = count + "+";
+
+                }
+
+                else{
+
+                    counter.innerText = count;
+
+                }
+
+            }
+
+        },30);
+
+    });
+
+}
+
+window.addEventListener("scroll",function(){
+
+    const stats=document.querySelector(".stats");
+
+    if(stats){
+
+        const position=stats.getBoundingClientRect().top;
+
+        if(position<window.innerHeight-100){
+
+            startCounter();
+
+        }
+
+    }
+
+});
+
+
+const fadeElements=document.querySelectorAll(
+
+".feature-card,.stat-card,.step-card,#about"
+
+);
+
+function reveal(){
+
+    fadeElements.forEach(function(item){
+
+        const top=item.getBoundingClientRect().top;
+
+        if(top<window.innerHeight-100){
+
+            item.classList.add("show","fade-up");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll",reveal);
+
+window.addEventListener("load",reveal);
+
+
+const features=document.querySelectorAll(".feature-card");
+
+features.forEach(function(card){
+
+    card.addEventListener("mouseenter",function(){
+
+        card.style.cursor="pointer";
+
+    });
+
+});
+
 
 setTimeout(function(){
 
-    console.log("Welcome to AI Interview Coach 🚀");
+    console.log("🚀 Welcome to AI Interview Coach");
 
 },1000);
