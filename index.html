@@ -1,670 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Interview Coach — practise, improve, and walk into your next interview prepared." />
     <title>AI Interview Coach</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-
-<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-
-<div class="container">
-
-<a class="navbar-brand fw-bold text-primary" href="#">
-
-🤖 AI Interview Coach
-
-</a>
-
-<button class="navbar-toggler"
-
-type="button"
-
-data-bs-toggle="collapse"
-
-data-bs-target="#navbar">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse" id="navbar">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-
-<a class="nav-link active" href="#">
-
-Home
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#features">
-
-Features
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#about">
-
-About
-
-</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="#contact">
-
-Contact
-
-</a>
-
-</li>
-
-</ul>
-
-<button class="btn btn-primary ms-3">
-
-Login
-
-</button>
-
-</div>
-
-</div>
-
-</nav>
-
-<section class="hero">
-
-<div class="container">
-
-<div class="row align-items-center">
-
-<div class="col-lg-6">
-
-<span class="badge bg-primary mb-3">
-
-🚀 AI Powered Interview Practice
-
-</span>
-
-<h1 class="display-4 fw-bold">
-
-Ace Every Interview
-
-<span class="text-primary">
-
-With AI
-
-</span>
-
-</h1>
-
-<p class="lead mt-4">
-
-Prepare smarter with AI-powered interview simulations,
-instant feedback,
-emotion analysis,
-and performance tracking.
-
-</p>
-
-<div class="mt-4">
-
-<a href="#"
-
-id="startBtn"
-
-class="btn btn-primary btn-lg">
-
-Start Interview
-
-</a>
-
-<button class="btn btn-outline-primary btn-lg ms-2">
-
-Learn More
-
-</button>
-
-</div>
-
-<div class="trusted mt-5">
-
-<i class="bi bi-people-fill text-primary"></i>
-
-Trusted by
-
-<strong>500+</strong>
-
-Students
-
-</div>
-
-</div>
-
-<div class="col-lg-6 text-center position-relative">
-
-<img
-
-src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
-
-class="img-fluid hero-image"
-
-alt="AI">
-
-<div class="floating-card">
-
-⭐ 95% Success Rate
-
-</div>
-
-<div class="floating-card second">
-
-🎤 Live AI Interview
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-   
-
-
-<section class="stats py-5">
-
-    <div class="container">
-
-        <div class="row text-center g-4">
-
-            <div class="col-md-3">
-
-                <div class="card stat-card">
-
-                    <div class="card-body">
-
-                        <i class="bi bi-people-fill stat-icon"></i>
-
-                        <h2>500+</h2>
-
-                        <p>Students Trained</p>
-
-                    </div>
-
-                </div>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home"><span class="brand-mark">AI</span> AI Interview Coach</a>
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+        <div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#features">Features</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+        <a class="nav-login" href="#contact">Log in <span>→</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="pill"><i></i> Your interview edge, powered by AI</p>
+            <h1>Ace Every Interview.<br /><em>Powered by AI.</em></h1>
+            <p class="hero-text">Practice real interview questions, receive AI-powered feedback, analyze your confidence, and improve your performance with every session.</p>
+            <div class="hero-actions">
+    <a
+        class="button primary"
+        href="https://ai-interview-buddy-yxpk.onrender.com"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        Start Interview
+        <span>→</span>
+
+    </a><a class="button text-button" href="#how-it-works">How it works <b>▶</b></a></div>
+            <div class="trusted"><div class="avatar-stack"><span>J</span><span>A</span><span>S</span><span>+</span></div><p>Trusted by <strong>500+ students</strong><br />landing their next opportunity.</p></div>
+          </div>
+          <div class="hero-visual" aria-label="Illustration of an AI interview practice dashboard">
+            <div class="halo halo-one"></div><div class="halo halo-two"></div>
+            <div class="floating note-one"><span>✦</span> Great answer!</div>
+            <div class="floating note-two"><span>↑</span> +18% confidence</div>
+            <div class="dashboard-card">
+              <div class="dash-top"><span class="dash-logo">P</span><span>Interview practice</span><i></i><i></i><i></i></div>
+              <div class="dash-content"><div class="person"><div class="hair"></div><div class="face"><i></i><i></i><b></b></div><div class="shirt"></div></div><div class="question"><span>QUESTION 04</span><p>How do you handle<br />a challenging project?</p><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Listening to your answer...</small></div></div>
+              <div class="dash-bottom"><span>● Live practice</span><button>End session</button></div>
             </div>
-
-            <div class="col-md-3">
-
-                <div class="card stat-card">
-
-                    <div class="card-body">
-
-                        <i class="bi bi-graph-up-arrow stat-icon"></i>
-
-                        <h2>95%</h2>
-
-                        <p>Success Rate</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="card stat-card">
-
-                    <div class="card-body">
-
-                        <i class="bi bi-mic-fill stat-icon"></i>
-
-                        <h2>1000+</h2>
-
-                        <p>Mock Interviews</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="card stat-card">
-
-                    <div class="card-body">
-
-                        <i class="bi bi-headset stat-icon"></i>
-
-                        <h2>24/7</h2>
-
-                        <p>Support</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+            <div class="score-card"><small>YOUR SCORE</small><strong>92<span>/100</span></strong><div><i></i><i></i><i></i><i></i><i></i></div><p>You're doing amazing!</p></div>
+          </div>
         </div>
+      </section>
+
+      <section class="stats container" aria-label="Prepwise statistics"><div><b>500<span>+</span></b><p>Students Practiced</p></div><div><b>95<span>%</span></b><p>Confidence Improved</p></div><div><b>1,000<span>+</span></b><p>AI Interviews Conducted</p></div><div><b>24<span>/7</span></b><p>AI Support Available</p></div></section>
+
+      <section class="section intro container" id="about"><p class="eyebrow">Made for the moment that matters</p><h2>More than practice.<br /><em>A better way to prepare.</em></h2><p>Prepwise brings a calm, personalised coach to every interview. Practise out loud, see what lands, and turn nerves into your best performance.</p></section>
+
+      <section class="section features" id="features"><div class="container"><div class="section-heading"><div><p class="eyebrow">Everything you need</p><h2>Your personal<br /><em>interview studio.</em></h2></div><p>Thoughtful tools to help you practise with purpose — before the big day.</p></div><div class="feature-grid"><article><div class="feature-icon voice">⌁</div><h3>Voice interviews</h3><p>Speak naturally with an AI interviewer that asks role-specific questions and keeps the conversation flowing.</p><a href="#contact">Explore feature <span>→</span></a></article><article><div class="feature-icon emotion">◕</div><h3>Confidence signals</h3><p>Understand your delivery, pace, and on-screen presence so you can come across clear and composed.</p><a href="#contact">Explore feature <span>→</span></a></article><article><div class="feature-icon chart"><span></span><span></span><span></span></div><h3>Performance insights</h3><p>See precisely where you shine and what to improve, with feedback that is kind, clear, and useful.</p><a href="#contact">Explore feature <span>→</span></a></article></div></div></section>
+
+      <section class="section how container" id="how-it-works"><p class="eyebrow">A simple rhythm</p><h2>From first question to<br /><em>full confidence.</em></h2><div class="steps"><article><span>01</span><div class="step-icon profile-icon">◌</div><h3>Tell us your goal</h3><p>Choose your role, experience, and the kind of interview ahead.</p></article><i class="step-line"></i><article><span>02</span><div class="step-icon practice-icon">◖</div><h3>Start your practice</h3><p>Meet your AI interviewer and answer questions out loud.</p></article><i class="step-line"></i><article><span>03</span><div class="step-icon feedback-icon">✦</div><h3>Grow with feedback</h3><p>Review your insights, focus your practice, and improve fast.</p></article></div></section>
+
+      <section class="benefits" id="benefits"><div class="container benefits-grid"><div class="benefit-art"><div class="benefit-ring"></div><div class="benefit-chat"><div class="chat-head"><span>AI Coach</span><i></i><i></i><i></i></div><p>Let’s make your answer<br />even stronger.</p><div class="bubble">Try adding a specific result<br />from your experience.</div><div class="typing"><i></i><i></i><i></i></div></div><div class="spark one">✦</div><div class="spark two">●</div></div><div class="benefit-copy"><p class="eyebrow">Why AI Interview Coach</p><h2>Walk in feeling<br /><em>like yourself —</em><br />at your best.</h2><p>There is no script for a great interview. Prepwise helps you find your own clear, confident voice.</p><ul><li><span>✓</span> AI-generated questions for your role</li><li><span>✓</span> Feedback right after every session</li><li><span>✓</span> Confidence and communication analysis</li><li><span>✓</span> Progress reports you can act on</li></ul><a class="button dark" href="#contact">Find your confidence <span>→</span></a></div></div></section>
+
+      <section class="section testimonials container" id="reviews"><div class="section-heading"><div><p class="eyebrow">A little social proof</p><h2>Loved by people<br /><em>with big plans.</em></h2></div><div class="rating"><b>4.9</b><span>★★★★★</span><p>Average learner rating</p></div></div><div class="testimonial-grid"><blockquote><div class="quote-mark">“</div><p>It felt like having a patient coach in my room. By my actual interview, I knew exactly how to structure my answers.</p><footer><span class="reviewer green">A</span><div><b>Arjun Mehta</b><small>Software engineer, placed at Finovo</small></div></footer></blockquote><blockquote><div class="quote-mark">“</div><p>The feedback was specific without being intimidating. I could hear my progress after just a few sessions.</p><footer><span class="reviewer purple">N</span><div><b>Nisha Raman</b><small>Graduate student, product analyst</small></div></footer></blockquote></div></section>
+
+      <!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+  <div class="contact-card container">
+
+    <!-- Left Side -->
+
+    <div>
+
+      <p class="eyebrow">
+        Your next step starts here
+      </p>
+
+      <h2>
+        Ready To Ace Your Next Interview?
+        <br>
+        <em>Start Today.</em>
+      </h2>
+
+      <p>
+        Practice with AI-powered mock interviews, receive instant feedback,
+        and boost your confidence before your next interview.
+      </p>
 
     </div>
 
-</section>
+    <!-- Right Side Form -->
 
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST">
 
-<section id="features" class="py-5 bg-light">
+      <!-- Web3Forms Access Key -->
+      <input
+        type="hidden"
+        name="access_key"
+        value="ab7d2eae-2cde-4f68-9def-6da96e2853ac">
 
-    <div class="container">
+      <!-- Email Subject -->
+      <input
+        type="hidden"
+        name="subject"
+        value="New AI Interview Coach Contact Form Submission">
 
-        <div class="text-center mb-5">
+      <!-- Disable Spam Bots -->
+      <input
+        type="checkbox"
+        name="botcheck"
+        style="display:none;">
 
-            <span class="text-primary fw-bold">
+      <!-- Name -->
 
-                FEATURES
+      <label>
 
-            </span>
+        Name
 
-            <h2 class="fw-bold mt-2">
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+          required>
 
-                Everything You Need
+      </label>
 
-            </h2>
+      <!-- Email -->
 
-            <p>
+      <label>
 
-                Practice smarter with AI-powered tools.
+        Email
 
-            </p>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required>
 
-        </div>
+      </label>
 
-        <div class="row g-4">
+      <!-- Interview Type -->
 
-            <!-- Card 1 -->
+      <label>
 
-            <div class="col-md-4">
+        What are you preparing for?
 
-                <div class="card feature-card h-100">
+        <select
+          name="preparing_for"
+          required>
 
-                    <div class="card-body text-center">
+          <option value="">
+            Choose an option
+          </option>
 
-                        <i class="bi bi-mic-fill feature-icon"></i>
+          <option value="Frontend Developer">
+            Frontend Developer
+          </option>
 
-                        <h4 class="mt-3">
+          <option value="Software Engineer">
+            Software Engineer
+          </option>
 
-                            Voice Interview
+          <option value="CyberSecurity Analyst">
+            CyberSecurity Analyst
+          </option>
 
-                        </h4>
+        </select>
 
-                        <p>
+      </label>
 
-                            Practice interviews naturally using voice interaction.
+      <!-- Message -->
 
-                        </p>
+      <label>
 
-                    </div>
+        Tell us about your goal
 
-                </div>
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Example: I am preparing for a Frontend Developer interview."
+          required></textarea>
 
-            </div>
+      </label>
 
+      <!-- Submit Button -->
 
-            <div class="col-md-4">
+      <button
+        class="button primary"
+        type="submit">
 
-                <div class="card feature-card h-100">
+        Start Interview
+        <span>→</span>
 
-                    <div class="card-body text-center">
+      </button>
 
-                        <i class="bi bi-emoji-smile-fill feature-icon"></i>
+      <!-- Success Message -->
 
-                        <h4 class="mt-3">
+      <p
+        class="form-note"
+        aria-live="polite">
 
-                            Emotion Detection
+      </p>
 
-                        </h4>
+    </form>
 
-                        <p>
+  </div>
 
-                            Analyze confidence and facial expressions during interviews.
+</section></div></section>
+    </main>
 
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 3 -->
-
-            <div class="col-md-4">
-
-                <div class="card feature-card h-100">
-
-                    <div class="card-body text-center">
-
-                        <i class="bi bi-bar-chart-fill feature-icon"></i>
-
-                        <h4 class="mt-3">
-
-                            Performance Analytics
-
-                        </h4>
-
-                        <p>
-
-                            Get detailed AI reports and improve every interview.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="text-primary fw-bold">
-                HOW IT WORKS
-            </span>
-
-            <h2 class="fw-bold mt-2">
-                Get Started In 3 Easy Steps
-            </h2>
-
-            <p>
-                Prepare yourself for interviews using AI-powered guidance.
-            </p>
-
-        </div>
-
-        <div class="row text-center">
-
-            <div class="col-md-4">
-
-                <div class="step-card">
-
-                    <div class="step-number">
-                        1
-                    </div>
-
-                    <i class="bi bi-person-check-fill step-icon"></i>
-
-                    <h4 class="mt-3">
-                        Choose Your Role
-                    </h4>
-
-                    <p>
-                        Select your preferred job role and interview type.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="step-card">
-
-                    <div class="step-number">
-                        2
-                    </div>
-
-                    <i class="bi bi-mic-fill step-icon"></i>
-
-                    <h4 class="mt-3">
-                        Start Interview
-                    </h4>
-
-                    <p>
-                        Answer AI-generated interview questions naturally.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="step-card">
-
-                    <div class="step-number">
-                        3
-                    </div>
-
-                    <i class="bi bi-bar-chart-line-fill step-icon"></i>
-
-                    <h4 class="mt-3">
-                        Receive Feedback
-                    </h4>
-
-                    <p>
-                        Analyze your performance and improve your confidence.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="about" class="py-5 bg-light">
-
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <div class="col-lg-6">
-
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
-                    class="img-fluid about-image"
-                    alt="AI Coach">
-
-            </div>
-
-            <div class="col-lg-6">
-
-                <span class="text-primary fw-bold">
-                    ABOUT US
-                </span>
-
-                <h2 class="fw-bold mt-3">
-
-                    AI Interview Coach
-
-                </h2>
-
-                <p class="mt-3">
-
-                    AI Interview Coach is designed to help students
-                    prepare for interviews through realistic AI mock
-                    interviews, instant feedback, confidence analysis,
-                    and performance tracking.
-
-                </p>
-
-                <ul class="list-unstyled mt-4">
-
-                    <li class="mb-3">
-
-                        <i class="bi bi-check-circle-fill text-primary"></i>
-
-                        AI-Powered Mock Interviews
-
-                    </li>
-
-                    <li class="mb-3">
-
-                        <i class="bi bi-check-circle-fill text-primary"></i>
-
-                        Instant Feedback Reports
-
-                    </li>
-
-                    <li class="mb-3">
-
-                        <i class="bi bi-check-circle-fill text-primary"></i>
-
-                        Emotion Detection
-
-                    </li>
-
-                    <li>
-
-                        <i class="bi bi-check-circle-fill text-primary"></i>
-
-                        Performance Analytics
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer class="bg-dark text-white pt-5 pb-4">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-6">
-
-                <h3 class="fw-bold">
-
-                    🤖 AI Interview Coach
-
-                </h3>
-
-                <p class="mt-3">
-
-                    Practice smarter with AI and land your dream job
-                    confidently.
-
-                </p>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <h5>
-
-                    Quick Links
-
-                </h5>
-
-                <ul class="list-unstyled">
-
-                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-
-                    <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
-
-                    <li><a href="#about" class="text-white text-decoration-none">About</a></li>
-
-                </ul>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <h5>
-
-                    Contact
-
-                </h5>
-
-                <p>
-
-                    mohamadjunaidrciet@gmail.com
-
-                </p>
-                <p>
-                    phone no : +91 7604933728
-                </p>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="text-center">
-
-            © 2026 AI Interview Coach | All Rights Reserved.
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="script.js"></script>
-
-</body>
-
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">AI</span> AI Interview Coach</a><div><a href="#home">Home</a><a href="#features">Features</a><a href="#contact">Contact</a></div><p>© <span id="year"></span> AI Interview Coach. Prepare Better. Perform Better.</p></div></footer>
+    <script src="script.js"></script>
+  </body>
 </html>
